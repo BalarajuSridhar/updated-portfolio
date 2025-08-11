@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sridhar Raju - Developer & Designer Portfolio</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- CDN Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+             <img src="person.jpg" alt="Sridhar Raju" class="w-10 h-10 rounded-full mr-3 object-cover">   
+                </div>
+                <span class="text-2xl font-bold heading-font text-black">Sridhar Raju</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-contact-btn">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t">
+            <a href="#home" class="block py-2 nav-link">Home</a>
+            <a href="#about" class="block py-2 nav-link">About</a>
+            <a href="#skills" class="block py-2 nav-link">Skills</a>
+            <a href="#projects" class="block py-2 nav-link">Projects</a>
+            <a href="#resume" class="block py-2 nav-link">Resume</a>
+            <a href="#contact" class="block mt-2 text-center nav-contact-btn">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center bg-white relative overflow-hidden">
+            <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div data-aos="fade-up">
+                    <h1 class="text-5xl md:text-7xl font-bold text-black mb-4 heading-font">
+                        <span id="typing-effect"></span><span class="typing-cursor">|</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">I build beautiful and intuitive web applications with a focus on user experience and clean code.</p>
+                    <a href="#projects" class="hero-btn">
+                        <span>View My Work</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold text-black mb-4 heading-font">A Passion for Building</h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">I'm a Computer Science student who loves turning complex problems into beautiful, simple, and intuitive designs. I am passionate about building excellent software that improves the lives of those around me. I specialize in creating software for clients ranging from individuals and small-businesses all the way to large enterprise corporations. What would you do if you had a software expert available at your fingertips?</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-black mb-12 heading-font" data-aos="fade-up">My Technical Skills</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Skills will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 data-aos="fade-up" class="text-4xl font-bold text-center text-black mb-4 heading-font">My Projects</h2>
+                <p data-aos="fade-up" data-aos-delay="100" class="text-center max-w-3xl mx-auto text-gray-600 text-lg mb-12">Here are a few projects I've worked on recently. Want to see more? Email me.</p>
+                <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Cards will be populated by JS -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="resume" class="py-24 bg-white">
+          <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-black mb-12 heading-font" data-aos="fade-up">My Resume</h2>
+            
+            <!-- Resume Toggle Buttons -->
+            <div class="flex justify-center mb-8" data-aos="fade-up">
+              <button id="resume-experience-btn" class="resume-tab-btn">Experience</button>
+              <button id="resume-education-btn" class="resume-tab-btn">Education</button>
+              <button id="resume-skills-btn" class="resume-tab-btn">Skills</button>
+            </div>
+        
+            <!-- Resume Content Container -->
+            <div id="resume-content" class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+              <!-- Content will be loaded by JavaScript -->
+            </div>
+        
+            <!-- Download Button -->
+            <div class="text-center mt-12" data-aos="fade-up">
+              <a href="your-resume.pdf" download id="download-resume-btn" class="hero-btn inline-flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                Download Full Resume (PDF)
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-black mb-12 heading-font" data-aos="fade-up">What People Say</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-green-600 text-5xl mb-4">"</div>
+                        <p class="text-gray-700 mb-6">Sridhar transformed our web presence with his technical expertise and creative vision. His attention to detail is unmatched.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-500">CEO, TechStart Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-green-600 text-5xl mb-4">"</div>
+                        <p class="text-gray-700 mb-6">Working with Sridhar was a game-changer for our project. He delivered beyond our expectations with innovative solutions.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black">Michael Chen</h4>
+                                <p class="text-sm text-gray-500">CTO, Digital Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-green-600 text-5xl mb-4">"</div>
+                        <p class="text-gray-700 mb-6">Sridhar's ability to understand complex requirements and translate them into elegant solutions is truly remarkable.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black">Emily Rodriguez</h4>
+                                <p class="text-sm text-gray-500">Product Manager, InnovateCo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="max-w-2xl mx-auto" data-aos="fade-up">
+                    <h2 class="text-4xl font-bold text-black mb-4 heading-font">Let's Build Something Amazing</h2>
+                    <p class="text-gray-600 text-lg mb-8">I'm currently available for freelance work or full-time positions. If you have a project that needs creative expertise, I'd love to hear about it.</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                        <button id="cover-letter-btn" class="hero-btn w-full sm:w-auto flex items-center justify-center gap-2">
+                            <span>✨ AI Cover Letter</span>
+                        </button>
+                        <a href="mailto:sridhar.raju@example.com" class="hero-btn hero-btn-secondary w-full sm:w-auto">
+                            <span>sridhar.raju@example.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.linkedin.com/in/your-profile-here" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300 font-semibold">LinkedIn</a>
+                <a href="https://github.com/your-username-here" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300 font-semibold">GitHub</a>
+                <a href="https://twitter.com/your-handle-here" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300 font-semibold">Twitter</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Sridhar Raju. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI Modal -->
+    <div id="ai-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 opacity-0 pointer-events-none">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-11/12 md:max-w-2xl mx-auto p-6 md:p-8 transform scale-95">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-black heading-font">AI Assistant</h3>
+                <button id="close-modal-btn" class="text-gray-500 text-3xl hover:text-black">&times;</button>
+            </div>
+            <div id="modal-body" class="text-gray-700 leading-relaxed max-h-[60vh] overflow-y-auto pr-4">
+                <div id="loading-indicator" class="flex justify-center items-center h-40">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
+                </div>
+                <div id="generated-content" class="hidden whitespace-pre-wrap"></div>
+            </div>
+            <div class="mt-6 flex justify-end space-x-4">
+                <button id="copy-btn" class="bg-gray-200 text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-300">Copy Text</button>
+                <button id="close-modal-btn-bottom" class="hero-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
