@@ -537,3 +537,40 @@ ss {
 .modal-content {
     transition: transform 0.25s ease;
 }
+/* Project Cards */
+.project-card {
+    background-color: var(--bg-white);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+}
+
+.project-card img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Tech Badges */
+.tech-badge {
+    background-color: rgba(0, 200, 83, 0.1);
+    color: var(--primary-green-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
