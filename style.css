@@ -174,96 +174,6 @@ body {
     transform: translateY(-5px);
 }
 
-/* New Resume Section Styles */
-.resume-tab-btn {
-    padding: 0.5rem 1.5rem;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.resume-tab-btn:hover {
-    background-color: #f3f4f6;
-}
-
-.resume-tab-active {
-    background-color: var(--primary-green);
-    color: var(--bg-white);
-}
-
-.resume-item {
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.resume-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.resume-date {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--primary-green);
-    margin-bottom: 0.25rem;
-}
-
-.resume-company {
-    font-size: 1.125rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
-    color: var(--text-black);
-}
-
-.resume-position {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #4b5563;
-    margin-bottom: 0.5rem;
-}
-
-.resume-description {
-    color: #6b7280;
-}
-
-.resume-skill-category {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-black);
-}
-
-.resume-skill-item {
-    margin-bottom: 1rem;
-}
-
-.resume-skill-name {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.resume-skill-bar {
-    width: 100%;
-    height: 8px;
-    background-color: #e5e7eb;
-    border-radius: 9999px;
-    overflow: hidden;
-}
-
-.resume-skill-progre:root {
-    --bg-white: #FFFFFF;
-    --text-black: #000000;
-    --primary-green: #00C853;
-    --primary-green-dark: #00A746;
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
-}
 
 body {
     font-family: var(--font-body);
@@ -427,93 +337,6 @@ body {
     transform: translateY(-5px);
 }
 
-/* New Resume Section Styles */
-.resume-tab-btn {
-    padding: 0.5rem 1.5rem;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.resume-tab-btn:hover {
-    background-color: #f3f4f6;
-}
-
-.resume-tab-active {
-    background-color: var(--primary-green);
-    color: var(--bg-white);
-}
-
-.resume-item {
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.resume-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.resume-date {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--primary-green);
-    margin-bottom: 0.25rem;
-}
-
-.resume-company {
-    font-size: 1.125rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
-    color: var(--text-black);
-}
-
-.resume-position {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #4b5563;
-    margin-bottom: 0.5rem;
-}
-
-.resume-description {
-    color: #6b7280;
-}
-
-.resume-skill-category {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-black);
-}
-
-.resume-skill-item {
-    margin-bottom: 1rem;
-}
-
-.resume-skill-name {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.resume-skill-bar {
-    width: 100%;
-    height: 8px;
-    background-color: #e5e7eb;
-    border-radius: 9999px;
-    overflow: hidden;
-}
-
-.resume-skill-progress {
-    height: 100%;
-    background-color: var(--primary-green);
-    border-radius: 9999px;
-}
 
 
 .modal {
@@ -573,4 +396,239 @@ ss {
     font-size: 0.75rem;
     font-weight: 600;
     display: inline-block;
+}
+/* --- Resume Section --- */
+#resume {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative background shapes */
+#resume::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 200, 83, 0.05);
+    border-radius: 50%;
+    filter: blur(50px);
+}
+
+#resume::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 250px;
+    height: 250px;
+    background: rgba(0, 200, 83, 0.07);
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.resume-tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.resume-tab-btn {
+    padding: 0.75rem 2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    border-radius: 50px; /* Pill shape */
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-green);
+    background: transparent;
+    color: var(--primary-green);
+}
+
+.resume-tab-btn:hover, .resume-tab-active {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 200, 83, 0.3);
+}
+
+/* Glassmorphism Effect */
+.resume-content-container {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3rem;
+    max-width: 4xl;
+    margin: 0 auto;
+}
+
+/* --- Enhanced Timeline for Experience/Education --- */
+.timeline {
+    position: relative;
+    padding-left: 2.5rem; /* Space for the timeline line */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-green), transparent);
+    border-radius: 2px;
+}
+
+.resume-item {
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.resume-item:last-child {
+    padding-bottom: 0;
+}
+
+.resume-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem; /* Align with the timeline padding */
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-green);
+    border-radius: 50%;
+    border: 4px solid #f1f5f9;
+    transition: transform 0.3s ease;
+}
+
+.resume-item:hover::before {
+    transform: scale(1.2);
+}
+
+.resume-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.resume-company {
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--text-black);
+    margin-bottom: 0.25rem;
+}
+
+.resume-position {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.75rem;
+}
+
+.resume-description {
+    color: #6b7280;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* --- Enhanced Skills Section --- */
+.resume-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.resume-skill-category {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-black);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-green);
+    display: inline-block;
+}
+
+.resume-skill-item {
+    margin-bottom: 1rem;
+}
+
+.resume-skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.resume-skill-name {
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+.resume-skill-percentage {
+    font-weight: 600;
+    color: var(--primary-green);
+    font-size: 0.875rem;
+}
+
+.resume-skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.resume-skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), var(--primary-green-dark));
+    border-radius: 1rem;
+    transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Shimmer animation for skill bar */
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Download Button */
+.hero-btn { /* Assuming hero-btn is your main button class */
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    color: white;
+    border-radius: 50px;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 200, 83, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-content-container {
+        padding: 2rem;
+    }
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    .resume-item::before {
+        left: -1.5rem;
+    }
+    .resume-skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
